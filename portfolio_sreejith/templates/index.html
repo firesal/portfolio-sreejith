@@ -432,11 +432,11 @@
         grad.classList.add('graddark')    
     }
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)')){
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
         switch_to_light()
     }
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    const newColorScheme = event.matches ? "dark" : "light";
+    const newColorScheme = event.matches ? "light" : "dark";
     if (newColorScheme == 'light'){
         switch_to_light()
     }
